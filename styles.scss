@@ -288,30 +288,9 @@ body{
     }
 }
 // media queries
-@media screen and (max-width: 768px){
-    .cart{
-        width: 100%;
+
+@media screen and (max-width: 768px) {
+    .cart {
+      width: 100% !important;
     }
-  }
-  @media screen and (max-width: 400px){
-    .cart {
-        width: 100%;
-        min-width: 400px;
-        
-        
-      }
-  }
-  @media screen and (max-width: 280px){
-    .cart {
-        width: 100%;
-        min-width: 280px;
-        .close-cart{
-            margin-left: 12rem;
-        }
-        .cart-content{
-            grid-column-gap: 0;
-            grid-template-columns:1fr 1fr 1fr 1fr;
-        }
-        
-      }
   }
