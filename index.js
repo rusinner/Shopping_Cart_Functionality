@@ -142,6 +142,15 @@ class UI{
     cartOverlay.classList.remove('transparentBcg');
     cartDOM.classList.remove('showCart');
   }
+  cartLogic(){
+   clearCartBtn.addEventListener('click',() => {
+    this.clearCart();
+   });
+  }
+  clearCart(){
+    let cartItems = cart.map(item => item.id);
+    console.log(cartItems);
+  }
 }
 
 //local storage
@@ -177,5 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     Storage.saveProducts(products);
   }).then(()=>{
     ui.getBagButtons();
+    ui.cartLogic();
   });
 });
