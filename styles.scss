@@ -227,7 +227,7 @@ body{
             .fa-chevron-down {
                   color: var(--fontGreen);
                   cursor: pointer;
-}
+    }
             img {
                 width: 75px;
                 height: 75px;
@@ -283,9 +283,12 @@ body{
     .showCart{
         transform: translateX(0);
     }
-    .transparentBcg{
-        visibility: visible;
-    }
+    
+}
+
+
+.transparentBcg{
+    visibility: visible;
 }
 // media queries
 
