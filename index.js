@@ -238,3 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
     ui.cartLogic();
   });
 });
+
+AOS.init();

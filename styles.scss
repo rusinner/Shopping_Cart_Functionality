@@ -76,16 +76,24 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    
     .banner{
         text-align: center;
         background:rgba(255, 255, 255, 0.4);
-        display: inline-block;
-        padding: 2rem 0;
+        display: grid;
+        padding: 2rem 1rem;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
         .banner-title{
-            font-size: 3.4rem;
+            font-size: 3.8rem;
             text-transform: uppercase;
             letter-spacing: var(--mainSpacing);
             margin-bottom:3rem;
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            
         }
         .banner-btn{
             padding: 1rem 3rem;
@@ -97,11 +105,57 @@ body{
             border: 1px solid var(--navbarGreen);
             transition: var(--mainTransition);
             cursor: pointer;
+            grid-row: 3;
+            grid-column: 1 / span 3;
+            
             &:hover{
                 background:transparent;
                 color:var(--fontGreen);
             }
         }
+        h3{
+            margin-top: -3rem;
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 2;
+            
+        }
+    }
+}
+
+//philosophy section
+.philosophy-container{
+    height: auto;
+    width: 100%;
+    .container-center{
+        display: grid;
+        width: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        padding: 4rem;
+        background: linear-gradient(to left , #9ecb62 ,#daf281 );
+        .photos{
+            display: grid;
+            gap: .5rem;
+            
+            
+            img{
+                width: 70%;
+                min-width: 100px;
+                border-radius: 2rem;
+                &:nth-child(odd){
+                    margin-left: 14rem;
+                }
+            }
+        }
+        .text{
+            display: grid;
+            gap: 1rem;
+        }
+    }
+    .heading{
+        font-size: 4rem;
+        margin-left: 4rem;
+        
     }
 }
 
@@ -296,5 +350,16 @@ body{
 @media screen and (max-width: 768px) {
     .cart {
       width: 100% !important;
+    }
+    .container-center{
+        grid-template-columns: 1fr !important;
+        padding: 1rem !important;
+    }
+    img{
+        width: 100% !important;
+        border-radius: 2rem;
+        &:nth-child(odd){
+            margin-left: 0 !important;
+        }
     }
   }
