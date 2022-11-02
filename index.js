@@ -239,4 +239,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//menu event listener
+const navIcon = document.querySelector('.nav-icon');
+const menuDisplay = document.querySelector('.menu')
+navIcon.addEventListener('click' , () => {
+ menuDisplay.classList.toggle('menu-appear');
+// console.log('clicked');
+});
+
+//initialize scrolling library
 AOS.init();

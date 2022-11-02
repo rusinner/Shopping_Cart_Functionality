@@ -16,6 +16,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 body{
@@ -33,7 +35,7 @@ body{
     display: flex;
     align-items: center;
     background: var(--navbarGreen);
-    z-index: 1;
+    z-index: 2;
     .navbar-center{
         width: 100%;
         max-width: 1200px;
@@ -68,6 +70,39 @@ body{
             }
         }
     }
+}
+
+//menu section
+.menu{
+    width: 20rem;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+    background: var(--navbarGreen);
+    color:var(--fontGreen);
+    font-size: 2rem;
+    padding: 1rem;
+    list-style-type: none;
+    transform: translateY(-100%);
+    transition: var(--mainTransition);    
+    li{
+        padding: 1rem;
+        border-bottom: 1px solid var(--fontGreen);
+        cursor: pointer;
+        &:hover{
+            border-bottom: 2px solid var(--fontGreen);
+            letter-spacing: .1rem;
+
+        }
+        a{
+            text-decoration: none;
+            color: var(--fontGreen);
+        }
+    }
+    
+}
+.menu-appear{
+    transform: translateY(0);
 }
 // hero section
 .hero{
@@ -259,7 +294,6 @@ body{
         overflow-y: scroll;
         background:var(--mainWhite);
         z-index: 3;
-        background: rgba(4, 96, 13, 0.9);    
         padding: 1.5rem;
         transition: var(--mainTransition);
         transform: translateX(100%);
@@ -269,6 +303,10 @@ body{
         }
         .close-cart{
             cursor: pointer;
+            .fa-window-close{
+                font-size: 2rem;
+            }
+            
         }
         
       .cart-content{
@@ -346,6 +384,14 @@ body{
 .transparentBcg{
     visibility: visible;
 }
+
+//footer section
+.footer{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(to left , #9ecb62 ,#daf281 ) ;
+}
+
 // media queries
 
 @media screen and (max-width: 768px) {
@@ -355,12 +401,12 @@ body{
     .container-center{
         grid-template-columns: 1fr !important;
         padding: 1rem !important;
-    }
-    img{
-        width: 100% !important;
-        border-radius: 2rem;
-        &:nth-child(odd){
+        img{
+            width: 100% !important;
+            border-radius: 2rem;
             margin-left: 0 !important;
+            
         }
     }
+    
   }
