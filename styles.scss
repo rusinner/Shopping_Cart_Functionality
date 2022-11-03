@@ -393,15 +393,49 @@ body{
 //footer section
 .footer{
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     background:linear-gradient(to left , #9ecb62 ,#daf281 ) ;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 1rem 5rem;
     .contact-form{
-        height: 50vh;
-        border: 1px solid var(--fontGreen);
+        height: auto;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 1rem ;
+            input{
+                background: var(--fontGreen);
+                font-size: 1.5rem;
+                color: var(--mainWhite);
+                border-radius: 2rem;
+                padding: 1rem .6rem;
+                outline: none;
+            }
+            textarea{
+                background: var(--fontGreen);
+                font-size: 1.3rem;
+                color: var(--mainWhite);
+                padding: 1rem .6rem;
+            }
+            button{
+                background: var(--fontGreen);
+                font-size: 1.5rem;
+                color: var(--mainWhite);
+                padding: 1rem .6rem;
+                cursor: pointer;
+                &:hover{
+                    letter-spacing: .3rem;
+                    background:transparent;
+                }
+            }
+            
+        }
+        
+
     }
 }
 
